@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANDERLUST | Tourism & Travel</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+  body{background:#fff;color:#222}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+  .logo{font-size:26px;font-weight:800;color:#0077b6}
+  .logo span{color:#ff6b35}
+  nav a{margin:0 14px;text-decoration:none;color:#222;font-weight:500}
+  nav a:hover{color:#0077b6}
+  .btn{background:#ff6b35;color:#fff;padding:11px 22px;border:none;border-radius:25px;cursor:pointer;font-weight:600}
+  .btn:hover{background:#0077b6}
+  .hero{background:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200') center/cover;height:550px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+  .hero-box{background:rgba(0,0,0,0.5);padding:40px;border-radius:20px;max-width:700px}
+  .hero h1{font-size:48px;line-height:1.1}
+  .hero p{margin:15px 0 25px;font-size:18px}
+  .search{display:flex;background:#fff;padding:8px;border-radius:30px;gap:5px}
+  .search input,.search select{border:none;outline:none;padding:12px;flex:1;font-size:15px;border-radius:20px}
+  .search button{background:#ff6b35;color:#fff;border:none;padding:12px 25px;border-radius:25px;cursor:pointer;font-weight:600}
+  .section{padding:50px 40px}
+  .section h2{text-align:center;font-size:32px;margin-bottom:8px}
+  .section p.sub{text-align:center;color:#666;margin-bottom:30px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .card{border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.1);transition:0.3s}
+  .card:hover{transform:translateY(-6px)}
+  .card img{width:100%;height:220px;object-fit:cover}
+  .card-body{padding:15px}
+  .card-body h3{font-size:20px}
+  .card-body p{color:#666;font-size:14px;margin:6px 0}
+  .price{color:#0077b6;font-weight:800;font-size:18px}
+  .price s{color:#999;font-size:14px}
+  .card-body button{width:100%;margin-top:10px;background:#0077b6;color:#fff;border:none;padding:10px;border-radius:10px;cursor:pointer}
+  .card-body button:hover{background:#ff6b35}
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .why div{background:#f0f8ff;padding:25px;border-radius:15px}
+  .why h3{margin:10px 0}
+  .booking{background:#0077b6;color:#fff;padding:40px;border-radius:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .booking input,.booking select{padding:12px;border:none;border-radius:10px;outline:none}
+  footer{background:#111;color:#fff;text-align:center;padding:25px;margin-top:40px}
+  @media(max-width:768px){.why{grid-template-columns:1fr 1fr}.hero h1{font-size:32px}.search{flex-direction:column;border-radius:15px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">WANDER<span>LUST ✈️</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#why">Why Us</a>
+    <a href="#book">Book Now</a>
+  </nav>
+  <button class="btn">Book Trip</button>
+</header>
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>Explore The World<br>With Us</h1>
+    <p>Best tour packages in India & Worldwide at lowest price</p>
+    <div class="search">
+      <input type="text" placeholder="Where do you want to go? e.g. Goa, Manali">
+      <select><option>Select Days</option><option>3 Days</option><option>5 Days</option><option>7 Days</option></select>
+      <button onclick="alert('Searching best packages for you...')">Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="packages">
+  <h2>Popular Tour Packages</h2>
+  <p class="sub">Handpicked destinations loved by travellers</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600" alt="Goa">
+      <div class="card-body">
+        <h3>🌴 Goa Beach Trip</h3>
+        <p>⭐ 4.9 | 3 Nights / 4 Days | Flight + Hotel</p>
+        <div class="price">₹9,999 <s>₹15,999</s></div>
+        <button onclick="alert('Goa Package Booked! We will call you.')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600" alt="Manali">
+      <div class="card-body">
+        <h3>🏔️ Manali - Himachal</h3>
+        <p>⭐ 4.8 | 5 Nights / 6 Days | Volvo + Hotel</p>
+        <div class="price">₹12,499 <s>₹18,999</s></div>
+        <button onclick="alert('Manali Package Booked! We will call you.')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600" alt="Jaipur">
+      <div class="card-body">
+        <h3>🕌 Jaipur - Rajasthan</h3>
+        <p>⭐ 4.7 | 3 Nights / 4 Days | Cab + Hotel</p>
+        <div class="price">₹8,999 <s>₹12,999</s></div>
+        <button onclick="alert('Jaipur Package Booked! We will call you.')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Maldives">
+      <div class="card-body">
+        <h3>🏖️ Maldives Honeymoon</h3>
+        <p>⭐ 5.0 | 4 Nights / 5 Days | Water Villa</p>
+        <div class="price">₹89,999 <s>₹1,20,000</s></div>
+        <button onclick="alert('Maldives Package Booked! We will call you.')">Book Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <h2>Why Choose Us?</h2>
+  <p class="sub">We make your trip easy & memorable</p>
+  <div class="why">
+    <div><h1>💰</h1><h3>Best Price</h3><p>Lowest price guarantee on all packages</p></div>
+    <div><h1>🛡️</h1><h3>Safe Travel</h3><p>Verified hotels & trusted drivers</p></div>
+    <div><h1>📞</h1><h3>24/7 Support</h3><p>We are always available for you</p></div>
+    <div><h1>⭐</h1><h3>5000+ Happy Customers</h3><p>4.9 rating from real travellers</p></div>
+  </div>
+</section>
+
+<section class="section" id="book">
+  <div class="booking">
+    <div>
+      <h2 style="text-align:left">Plan Your Trip Now!</h2>
+      <p>Fill form, we will call you in 10 minutes.</p>
+    </div>
+    <form onsubmit="alert('Thank You! Our team will call you soon.');return false;" style="display:flex;gap:10px;flex-wrap:wrap">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select><option>Goa</option><option>Manali</option><option>Jaipur</option><option>Maldives</option><option>Dubai</option></select>
+      <button class="btn" style="background:#fff;color:#0077b6">Get Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h3>WANDERLUST TRAVELS</h3>
+  <p>Mumbai | Delhi | Jaipur | Goa | Call: 98765 43210</p>
+  <p>© 2026 Wanderlust. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
